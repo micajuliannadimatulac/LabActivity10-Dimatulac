@@ -7,6 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Author extends Model
 {
-    /** @use HasFactory<\Database\Factories\AuthorFactory> */
+    // Allows this model to use AuthorFactory.
     use HasFactory;
+
+    // Fields allowed when creating or updating an author.
+    protected $fillable = [
+        'name',
+        'position',
+        'email',
+    ];
 }
