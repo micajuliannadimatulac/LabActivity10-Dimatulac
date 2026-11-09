@@ -8,7 +8,7 @@
 
     {{-- Page heading --}}
     <div class="mb-8">
-        <h1 class="text-3xl font-bold text-green-900">
+        <h1 class="text-3xl font-bold text-[#7a5534]">
             Purok Dimatulac Bulletin
         </h1>
 
@@ -37,7 +37,7 @@
                    value="{{ request('q') }}"
                    placeholder="Search by title..."
                    class="w-full rounded-lg border border-gray-300
-                          px-4 py-2 focus:border-green-600
+                          px-4 py-2 focus:border-[#d5954e]
                           focus:outline-none">
         </div>
 
@@ -51,7 +51,7 @@
             <select id="category"
                     name="category"
                     class="w-full rounded-lg border border-gray-300
-                           px-4 py-2 focus:border-green-600
+                           px-4 py-2 focus:border-[#d5954e]
                            focus:outline-none">
 
                 <option value="">All Categories</option>
@@ -68,8 +68,8 @@
         {{-- Submit and reset controls --}}
         <div class="flex items-end gap-2">
             <button type="submit"
-                    class="rounded-lg bg-green-700 px-5 py-2
-                           font-medium text-white hover:bg-green-800">
+                    class="rounded-lg bg-[#d5954e] px-5 py-2
+                           font-medium text-white hover:bg-[#bf7d36]">
                 Search
             </button>
 
@@ -107,7 +107,7 @@
 
                     <span class="rounded-full bg-green-100
                                  px-3 py-1 text-xs font-semibold
-                                 text-green-800">
+                                 text-[#7a5534]">
                         {{ $post->category }}
                     </span>
 
@@ -123,7 +123,7 @@
                 {{-- Post title --}}
                 <h2 class="mb-3 text-xl font-bold text-gray-900">
                     <a href="{{ route('posts.show', $post->id) }}"
-                       class="hover:text-green-700">
+                       class="hover:text-[#bf7d36]">
                         {{ $post->title }}
                     </a>
                 </h2>

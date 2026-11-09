@@ -5,44 +5,40 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <!-- Default title for all pages -->
     <title>@yield('title', 'Barangay Bulletin – Purok Dimatulac')</title>
 
-    <!-- Load Tailwind CSS and JavaScript using Vite -->
+    <!-- Reuse the Tailwind and Vite setup. -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="bg-gray-100 min-h-screen flex flex-col">
+<body class="min-h-screen flex flex-col
+             bg-[#f2f5e2] text-[#7a5534] font-sans">
 
-    <!-- Navigation bar shared by all pages -->
-    <nav class="bg-green-800 text-white p-4">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
+    <!-- Brown navigation from Lab 9. -->
+    <nav class="bg-[#7a5534] text-white p-4">
+        <div class="max-w-6xl mx-auto flex
+                    justify-between items-center">
 
-            <!-- Website title -->
-            <a href="{{ url('/posts') }}"
+            <a href="{{ route('posts.index') }}"
                class="text-xl font-bold">
                 Barangay Bulletin
             </a>
 
-            <!-- Navigation links -->
-            <div class="flex gap-4">
-                <a href="{{ url('/posts') }}"
-                   class="hover:underline">
-                    Home
-                </a>
-            </div>
+            <a href="{{ route('posts.index') }}"
+               class="hover:text-[#f2f5e2]">
+                Home
+            </a>
         </div>
     </nav>
 
-    <!-- Main content changes depending on the page -->
+    <!-- Content from the individual Blade pages. -->
     <main class="max-w-6xl mx-auto w-full p-6 flex-grow">
-
         @yield('content')
-
     </main>
 
-    <!-- Footer shared by all pages -->
-    <footer class="bg-green-800 text-white text-center p-4">
+    <!-- Light footer matching Lab 9. -->
+    <footer class="border-t border-[#e5dccd]
+                   bg-white text-[#8a765e] text-center p-4">
         <p>
             &copy; {{ date('Y') }}
             Barangay Bulletin – Purok Dimatulac

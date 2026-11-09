@@ -11,7 +11,7 @@
         {{-- Return to the bulletin listing. --}}
         <a href="{{ route('posts.index') }}"
            class="mb-6 inline-block font-medium
-                  text-green-700 hover:underline">
+                  text-[#7a5534] hover:underline">
             ← Back to announcements
         </a>
 
@@ -22,9 +22,9 @@
             {{-- Category and pinned badge --}}
             <div class="mb-5 flex flex-wrap gap-2">
 
-                <span class="rounded-full bg-green-100
+                <span class="rounded-full bg-[#f2f5e2]
                              px-3 py-1 text-sm font-medium
-                             text-green-800">
+                             text-[#7a5534]">
                     {{ $post->category }}
                 </span>
 
@@ -67,9 +67,9 @@
         {{-- Bottom navigation --}}
         <div class="mt-8">
             <a href="{{ route('posts.index') }}"
-               class="inline-block rounded-lg bg-green-700
+               class="inline-block rounded-lg bg-[#d5954e]
                       px-5 py-3 font-medium text-white
-                      hover:bg-green-800">
+                      hover:bg-[#bf7d36]">
                 Back to Bulletin
             </a>
         </div>
